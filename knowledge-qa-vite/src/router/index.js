@@ -11,6 +11,21 @@ const routes = [
     path : '/qa',
     name : 'QA',
     component : QuestionCard
+ },
+ {
+  path : '/login',
+  name : 'Loging in',
+  component : () => import('../views/Login.vue')
+ },
+ {
+  path : '/register',
+  name : 'Register',
+  component : () => import('../views/Register.vue')
+ },
+ {
+  path : '/dashboard',
+  name : 'Self Dashboard',
+  component : () => import('../views/SelfDashboard.vue')
  }
 ]
 

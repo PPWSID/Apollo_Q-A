@@ -33,6 +33,7 @@
     margin-bottom: 16px;
     color: #fff;
     transition: box-shadow 0.3s;
+    box-shadow: none;
   }
 
   .question-card:hover {
@@ -59,7 +60,7 @@
 
   .meta {
     font-size: 13px;
-    color: #bbb;
+    /* color: #bbb; */
     margin-top: 4px;
   }
 
@@ -68,7 +69,7 @@
     gap: 12px;
     font-size: 14px;
     margin-top: 8px;
-    color: #ccc;
+    /* color: #ccc; */
   }
 
 </style>

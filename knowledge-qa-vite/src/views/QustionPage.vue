@@ -1,7 +1,7 @@
 <template>
     <div class="home">
       <header class="header">
-        <h1>ถามตอบ</h1>
+        <h1> Q&A Knowledge  </h1>
         <nav>
           <a href="#">หน้าแรก</a>
           <a href="#">หมวดหมู่</a>
@@ -30,7 +30,7 @@
   
       <button class="fab">+ ถามคำถาม</button>
     </div>
-  </template>
+</template>
   
 <script setup>
   import QuestionCard from '../components/QuestionCard.vue';
@@ -60,13 +60,19 @@
   ];
 </script>
   
-<style scoped>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
   .home {
-    background-color: #121212;
+    background-color: #000000;
     color: #fff;
     padding: 24px;
     min-height: 100vh;
     font-family: 'Segoe UI', sans-serif;
+    box-shadow: none;
   }
   .header {
     display: flex;
@@ -75,14 +81,14 @@
   }
   .header nav a {
     margin-left: 16px;
-    color: #ccc;
+    color: #fff;
     text-decoration: none;
   }
   .header nav a:hover {
     color: #fff;
   }
   .search {
-    width: 100%;
+    width: 95%;
     padding: 12px;
     border-radius: 8px;
     margin: 20px 0;
@@ -107,16 +113,16 @@
     position: fixed;
     bottom: 24px;
     right: 24px;
-    background-color: #9b59b6;
+    background-color: #34495e ;
     color: white;
     border: none;
     padding: 16px;
-    border-radius: 50%;
-    font-size: 20px;
+    border-radius: 10px;
+    font-size: 16px;
     cursor: pointer;
   }
   .fab:hover {
-    background-color: #8e44ad;
+    background-color: #34495e ;
   }
 </style>
   
