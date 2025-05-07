@@ -1,11 +1,12 @@
 <template>
     <div class="home">
       <header class="header">
-        <h1> Q&A Knowledge  </h1>
+        <h1> QA Knowledge  </h1>
         <nav>
           <a href="#">หน้าแรก</a>
           <a href="#">หมวดหมู่</a>
           <a href="#">ถามคำถาม</a>
+          <a href="#">user</a>
         </nav>
       </header>
   
@@ -37,21 +38,21 @@
   
   const questions = [
     {
-      title: 'อะไรเริ่มต้นกับ React อย่างไร?',
+      title: 'title 1',
       user: '@user123',
       time: '2 ชั่วโมงที่แล้ว',
       answers: 5,
       likes: 10,
     },
     {
-      title: 'ปิด Element ย่อมอยู่ท่าอย่างไร?',
+      title: 'title 2',
       user: 'aiusar456',
       time: '5 ชั่วโมงที่แล้ว',
       answers: 2,
       likes: 3,
     },
     {
-      title: 'ความแตกต่างระหว่าง SQL กับ NoSQL?',
+      title: 'title 3',
       user: 'auser789',
       time: '1 วันที่ผ่านมา',
       answers: 8,
@@ -61,11 +62,7 @@
 </script>
   
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+
   .home {
     background-color: #000000;
     color: #fff;
@@ -81,6 +78,7 @@
   }
   .header nav a {
     margin-left: 16px;
+    margin-right : 16px;
     color: #fff;
     text-decoration: none;
   }
@@ -88,7 +86,7 @@
     color: #fff;
   }
   .search {
-    width: 95%;
+    width: 100%;
     padding: 12px;
     border-radius: 8px;
     margin: 20px 0;

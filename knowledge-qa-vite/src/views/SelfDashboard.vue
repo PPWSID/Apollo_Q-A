@@ -35,11 +35,6 @@
 </script>
   
 <style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
 
   .dashboard {
     background-color: #121212;

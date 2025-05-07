@@ -52,12 +52,7 @@
 </script>
   
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
+
   .register-page {
     background-color: #121212;
     color: white;
