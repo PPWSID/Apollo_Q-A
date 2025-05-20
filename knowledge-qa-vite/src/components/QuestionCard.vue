@@ -5,12 +5,13 @@
         <div class="icon">?</div>
         <h2>{{ question.title }}</h2>
       </div>
-      <p class="meta">
-        {{ question.time }} โดย {{ question.user }}
-      </p>
+      <div class="meta">
+        <p>{{ question.time }} </p>
+        <p>โดย {{ question.user }} </p>
+      </div>
       <div class="stats">
-        <span>💬 {{ question.answers }}</span>
-        <span>👍 {{ question.likes }}</span>
+        <div>💬 {{ question.answers }}</div>
+        <div>👍 {{ question.likes }}</div>
       </div>
     </div>
 
@@ -64,12 +65,24 @@
     margin-top: 4px;
   }
 
+  .meta p {
+    margin: 0;
+    display: inline-block;
+    padding-right : 2px;
+  }
+
   .stats {
     display: flex;
     gap: 12px;
     font-size: 14px;
     margin-top: 8px;
     /* color: #ccc; */
+  }
+
+  .stats div {
+    display: flex;
+    /* align-items: center; */
+    gap: 4px;
   }
 
 </style>

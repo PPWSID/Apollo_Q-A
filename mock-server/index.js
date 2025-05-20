@@ -1,6 +1,5 @@
 const { ApolloServer, gql } = require('apollo-server');
 
-// 1. GraphQL Schema
 const typeDefs = gql`
   type Question {
     id: ID!
@@ -13,7 +12,6 @@ const typeDefs = gql`
   }
 `;
 
-// 2. Mock Data
 const questionsData = [
   {
     id: '1',
@@ -32,17 +30,14 @@ const questionsData = [
   },
 ];
 
-// 3. Resolvers ใช้ mock data
 const resolvers = {
   Query: {
     questions: () => questionsData,
   },
 };
 
-// 4. สร้าง Server
 const server = new ApolloServer({ typeDefs, resolvers });
 
-// 5. รัน Server
 server.listen({ port: 4000 }).then(({ url }) => {
   console.log(`🚀 Mock server ready at ${url}`);
 });

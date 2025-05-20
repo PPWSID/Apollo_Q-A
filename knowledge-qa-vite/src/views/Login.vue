@@ -27,7 +27,8 @@
         </form>
   
         <p class="register-link">
-          ยังไม่มีบัญชี? <a href="#">สมัครสมาชิก</a>
+          <!-- <a href="#" @click="gotoRegis"> ลืมรหัสผ่าน ?</a> -->
+          <a href="#"  @click="goToRegister">สมัครสมาชิก</a>
         </p>
       </div>
     </div>
@@ -35,9 +36,18 @@
   
 <script setup>
   import { ref } from 'vue';
-  
+  import { useRouter } from 'vue-router'
+
+  const router = useRouter()
+
   const username = ref('');
   const password = ref('');
+  
+
+  function goToRegister() {
+    router.push('/register')
+  }
+
   
   const handleLogin = () => {
     if (!username.value || !password.value) {
@@ -58,7 +68,7 @@
   }
   
   .login-page {
-    background-color: #000;
+    background-color: #121212;
     color: #000;
     display: flex;
     justify-content: center;
@@ -76,7 +86,6 @@
   h1 {
     margin-bottom: 8px;
     font-size: 28px;
-    color: #9b59b6;
   }
   .subtitle {
     font-size: 14px;
@@ -105,7 +114,7 @@
   }
   button {
     background-color: #9b59b6;
-    color: white;
+    color: #fff;
     border: none;
     padding: 12px;
     border-radius: 8px;
@@ -124,7 +133,10 @@
   }
   .register-link a {
     color: #fff;
+    /* padding-right: 10px; */
     text-decoration: underline;
   }
+
+
 </style>
   

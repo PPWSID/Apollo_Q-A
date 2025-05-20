@@ -58,11 +58,17 @@
       answers: 8,
       likes: 15,
     },
+    {
+      title: 'title 4',
+      user: '',
+      time: '',
+      answers: null,
+      likes: undefined,
+    },
   ];
 </script>
   
 <style>
-
   .home {
     background-color: #000000;
     color: #fff;
@@ -104,7 +110,7 @@
     color: white;
     border: none;
     padding: 6px 12px;
-    border-radius: 16px;
+    border-radius: 14px;
     cursor: pointer;
   }
   .fab {

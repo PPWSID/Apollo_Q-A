@@ -26,7 +26,7 @@
         </form>
   
         <p class="login-link">
-          มีบัญชีอยู่แล้ว? <a href="#">เข้าสู่ระบบ</a>
+          <a href="#" @click="gotoLogin">เข้าสู่ระบบ</a>
         </p>
       </div>
     </div>
@@ -34,19 +34,25 @@
   
 <script setup>
   import { ref } from 'vue';
+  import { useRouter } from 'vue-router'
+
+  const router = useRouter()
   
   const username = ref('');
   const email = ref('');
   const password = ref('');
   const confirmPassword = ref('');
   
+  function gotoLogin() {
+    router.push('/login')
+  }
+
   const handleRegister = () => {
     if (password.value !== confirmPassword.value) {
       alert('รหัสผ่านไม่ตรงกัน');
       return;
     }
   
-    // mock register logic
     alert(`สมัครสมาชิกสำเร็จ: ${username.value}`);
   };
 </script>
@@ -62,15 +68,11 @@
     align-items: center;
   }
   .register-box {
-    background-color: #1f1f1f;
+    background-color: #1e1e1e;
     padding: 40px;
     border-radius: 12px;
     width: 100%;
     max-width: 450px;
-  }
-  h1 {
-    font-size: 26px;
-    color: #9b59b6;
   }
   .subtitle {
     font-size: 14px;
@@ -80,6 +82,7 @@
   form {
     display: flex;
     flex-direction: column;
+    /* color: white; */
   }
   label {
     margin-bottom: 6px;
@@ -90,9 +93,12 @@
     padding: 10px;
     border-radius: 6px;
     border: none;
-    margin-bottom: 18px;
-    background-color: #2c2c2c;
+    margin-bottom: 20px;
+    background-color: #2a2a2a;
     color: white;
+  }
+  input::placeholder {
+    color: #888;
   }
   button {
     background-color: #9b59b6;
