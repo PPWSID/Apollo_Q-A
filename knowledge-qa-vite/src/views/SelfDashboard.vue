@@ -23,13 +23,12 @@
   import { reactive } from 'vue';
   
   const user = reactive({
-    username: 'dev_john',
-    email: 'john@example.com',
-    bio: 'นักพัฒนา Vue ผู้หลงใหลในการแชร์ความรู้',
+    username: 'dev_pond',
+    email: 'pond@example.com',
+    bio: 'dev อ่ะ',
   });
   
   const saveProfile = () => {
-    // mock save logic
     alert('บันทึกข้อมูลเรียบร้อยแล้ว');
   };
 </script>
